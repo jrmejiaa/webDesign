@@ -144,11 +144,16 @@ h4{
 .containerAnuncios{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .anuncio{
-    flex-basis: calc(33.3% - 1rem);
+    /* flex-shrink it is not going to make the things smaller, it is going to respect the basis calculation it can be located in just one command the three parts: 
+    flex-grow: 0; flex-shrink: 0; flex-basis: calc(33.3% - 1rem);;
+    */
+    flex: 0 0 calc(33.3% - 1rem); 
     border: 0.1rem solid #B5B5B5;
     background: #F5F5F5;
+    margin-bottom: 2rem;
 }
 .contentAnuncio{
     padding: 2rem;
