@@ -42,25 +42,25 @@
         <h2 class="fw-300 centerText">Mas sobre nosotros</h2>
         
         <div class="iconsNosotros">
-        <div class="icon">
-            <!-- the DIV section is used when it is a division but it is not so important to use a SECTION and it does not satisfy the conditions.-->
-            <img src="img/icono1.svg" alt="Icono Seguridad">
-            <h3>Seguridad</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
-        </div>
+            <div class="icon">
+                <!-- the DIV section is used when it is a division but it is not so important to use a SECTION and it does not satisfy the conditions.-->
+                <img src="img/icono1.svg" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt alias earum porro! Quasi minima officia fuga autem! Dolorem molestiae facere ullam. Magni, voluptatibus incidunt dignissimos qui voluptatum consectetur perferendis esse?</p>
+            </div>
 
-        <div class="icon">
-            <img src="img/icono2.svg" alt="Icono Mejor Precio">
-            <h3>El mejor Precio</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
-        </div>
+            <div class="icon">
+                <img src="img/icono2.svg" alt="Icono Mejor Precio">
+                <h3>El mejor Precio</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
+            </div>
 
-        <div class="icon">
-            <img src="img/icono3.svg" alt="Icono A Tiempo">
-            <h3>A Tiempo</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
+            <div class="icon">
+                <img src="img/icono3.svg" alt="Icono A Tiempo">
+                <h3>A Tiempo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
+            </div>
         </div>
-    </div>
     </section>
 
     <main class="section container">
@@ -159,32 +159,46 @@
         </div>
     </section>
 
-    <section>
-        <h3>Nuestro Blog</h3>
-        <article>
-            <!-- It uses for the entrys in a Blog, Foro, Article or a commentary section -->
-            <img src="img/blog1.jpg" alt="Entrada Blog 1">
-            <h4>Terraza en el techo de tu casa</h4>
-            <p>Escrito el: <em>20/10/2019</em> por: <em>Admin</em> </p>
-            <p>Consejos para constuir una terraza en el techo de tu casa, con los mejores materiales y ahorrando dinero</p>
-        </article>
+    <div class="inferiorSection container section">
+        <section class="blog">
+            <h3 class="fw-300 centerText">Nuestro Blog</h3>
+            <article class="entryBlog">
+                <!-- It uses for the entrys in a Blog, Foro, Article or a commentary section -->
+                <div class="entryImg">
+                    <img src="img/blog1.jpg" alt="Entrada Blog 1">
+                </div>
+                <div class="entryText">
+                    <a href="#">
+                        <h4>Terraza en el techo de tu casa</h4>
+                    </a>
+                    <p>Escrito el: <span>20/10/2019</span> por: <span>Admin</span> </p>
+                    <p>Consejos para constuir una terraza en el techo de tu casa, con los mejores materiales y ahorrando dinero</p>
+                </div>
+            </article>
 
-        <article>
-            <img src="img/blog2.jpg" alt="Entrada Blog 2">
-            <h4>Guía para la decoración de tu hogar</h4>
-            <p>Escrito el: <em>20/10/2019</em> por: <em>Admin</em></p>
-            <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>
-        </article>
-    </section>
+            <article class="entryBlog">
+                <div class="entryImg">
+                    <img src="img/blog2.jpg" alt="Entrada Blog 2">
+                </div>
+                <div class="entryText">
+                    <a href="#">
+                        <h4>Guía para la decoración de tu hogar</h4>
+                    </a>
+                    <p>Escrito el: <span>20/10/2019</span> por: <span>Admin</span></p>
+                    <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+                </div>
+            </article>
+        </section>
 
-    <section>
-        <h3>Testimoniales</h3>
-        <blockquote>
-            <!-- When it wants to give a testimony of any experience, it uses this label to enfatize the idea is from another person -->
-            El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron cumple con todas mis expectativas. 
-        </blockquote>
-        <p>- Jairo Mejia</p>
-    </section>
+        <section class="testimonials">
+            <h3 class="fw-300 centerText">Testimoniales</h3>
+            <blockquote>
+                <!-- When it wants to give a testimony of any experience, it uses this label to enfatize the idea is from another person -->
+                El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron cumple con todas mis expectativas. 
+            </blockquote>
+            <p>- Jairo Mejia</p>
+        </section>
+    </div>
 
     <footer>
         <!-- It uses to make the final part of a webpage, although is its main purpose, it can be used alsoto determine a footer inside of a section that we were talking about. For example, the autor of some phrase in the BLOCKQUOTE label or at the end of an article to say who has written the article (inside of the ARTICLE label) -->

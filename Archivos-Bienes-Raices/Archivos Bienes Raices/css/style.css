@@ -189,3 +189,47 @@ h4{
 .contentContact p{
     font-size: 1.8rem;
 }
+/* Inferior section */
+.inferiorSection{
+    display: flex;
+    justify-content: space-between;
+}
+.inferiorSection .blog{
+    flex-basis: 60%;
+}
+.inferiorSection .testimonials{
+    flex-basis: calc(40% - 1rem);
+}
+.entryBlog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.entryBlog:last-of-type{
+    margin-bottom: 0;
+}
+.entryBlog .entryImg{
+    flex-basis: 40%;
+}
+.entryBlog .entryText{
+    flex-basis: calc(60% - 3rem);
+}
+.entryText h4{
+    margin: 0;
+    line-height: 1.4;
+}
+.entryText h4::after{
+    content: "";
+    display: block;
+    width: 15rem;
+    height: 0.5rem;
+    background-color: #71B100;
+    margin-top: 1rem;
+}
+.entryText span{
+    color: #E08709;
+}
+.entryText a{
+    color: black;
+    text-decoration: none;
+}
