@@ -219,6 +219,7 @@ h4{
     line-height: 1.4;
 }
 .entryText h4::after{
+    /* Pseudo-element to create the line after the text. It uses the display block to create a block and then uses the properties width and height to give it the size */
     content: "";
     display: block;
     width: 15rem;
@@ -232,4 +233,44 @@ h4{
 .entryText a{
     color: black;
     text-decoration: none;
+}
+/* Testimonials */
+.testimonial{
+    background-color: #71B100;
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: white;
+    border-radius: 2rem;
+}
+.testimonial p{
+    text-align: right;
+}
+.testimonial blockquote::before{
+    /* Pseudo-element before to create an object before some specific element, in this case would be blockquote. It can be used with an image as in this case, but we should let the object a size. */
+    content: "";
+    background-image: url(../img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    /* Position relative (in the object that you want to move) and absolute (in the element where it should start the position) are two values from the property position to move an element with freedom in the space of the webpage to create a realtive position between them*/
+    position: absolute;
+    left: -2rem;
+}
+.testimonial blockquote{
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+/* FOOTER */
+.siteFooter{
+    background-color: #333333;
+    margin-bottom: 0;
+}
+.containerFooter{
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright{
+    margin: 0;
+    color: white;
 }
