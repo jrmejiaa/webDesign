@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Anuncio</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <!-- The last style sheet should be yours -->
@@ -30,61 +30,33 @@
         </div>
     </header>
 
-    <h1 class="fw-300 centerText">Contacto</h1>
-    <img src="img/destacada3.jpg" alt="Imagen Contacto">
+    <h1 class="fw-300 centerText">Casa en Venta Frente al Bosque</h1>
+    <img src="img/destacada.jpg" alt="Imagen Anuncio">
+    
+    <main class="container section containerCenter">
+        <div class="summaryProperty">
+            <p class="price">$3,000,000</p>
 
-    <main class="section container containerCenter">
-        <h2 class="fw-300 centerText">Llena el formulario de Contacto</h2>
+            <ul class="iconsChar">
+                <li>
+                    <img src="img/icono_wc.svg" alt="icono_wc">
+                    <p>3</p>
+                </li>
+                <li>
+                    <img src="img/icono_estacionamiento.svg" alt="icono_wc">
+                    <p>3</p>
+                </li>
+                <li>
+                    <img src="img/icono_dormitorio.svg" alt="icono_wc">
+                    <p>3</p>
+                </li>
+            </ul>
+        </div>
 
-        <form action="">
-            <fieldset>
-                <legend>Información Personal</legend>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" placeholder="Tu Nombre">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas iaculis eros id neque hendrerit fermentum. Nam tincidunt, libero sed aliquet porttitor, massa eros blandit tortor, ut pulvinar libero arcu a ante. Donec blandit purus in justo pellentesque, eget feugiat augue facilisis. Sed scelerisque nisl eu sapien malesuada vulputate. Sed mauris nisl, volutpat quis leo sed, dapibus porttitor dolor. Aenean ornare elementum quam, a pretium metus semper a. Cras feugiat mauris sed mi ornare fermentum nec ac magna. Donec augue neque, cursus a urna in, placerat imperdiet nulla. Nullam malesuada pulvinar est, sit amet placerat neque porta nec. In vestibulum hendrerit ipsum dictum lobortis. Maecenas cursus tempor consectetur. </p>
 
-                <label for="email">E-mail:</label>
-                <input type="email" id="email" placeholder="Tu Correo Electrónico" required>
+        <p>Quisque condimentum vehicula urna sed facilisis. Proin nec enim at ex vehicula congue et eu augue. Integer rhoncus efficitur dignissim. Aliquam nec est a arcu pretium scelerisque eu in turpis. Vivamus nibh lacus, faucibus vitae eros sed, interdum molestie ante. Integer aliquet tristique ante, hendrerit mattis magna. Morbi convallis, purus in hendrerit venenatis, velit metus consectetur erat, vitae volutpat magna dui at mi. Donec non imperdiet leo, at blandit nunc. Aenean quis nibh in massa mollis vestibulum id at ligula. Aenean nec venenatis tellus. Nunc ac tellus vel enim mollis gravida sit amet sit amet turpis. Etiam ligula nibh, pretium in massa id, lobortis pharetra risus. Cras commodo, sem sed ornare maximus, dui ipsum tempus velit, in molestie enim urna quis tortor. Vivamus vitae nunc arcu.</p> 
 
-                <label for="telefono">Telefono:</label>
-                <input type="tel" id="telefono" placeholder="Tu telefono" required>
-
-                <label for="mensaje">Mensaje:</label>
-                <textarea name="mensaje" id="mensaje"></textarea>
-            </fieldset>
-
-            <fieldset>
-                <legend>Información Sobre Propiedad</legend>
-                <label for="opciones">Vende o Compra</label>
-                <select id="opciones">
-                    <option value="" disabled selected>-- Seleccione --</option>
-                    <option value="Compra">Compra</option>
-                    <option value="Vende">Vende</option>
-                </select>
-                <label for="Presupuesto">Presupuesto</label>
-                <input type="number" id="Presupuesto" placeholder="Tu Presupuesto" min="0">
-            </fieldset>
-
-            <fieldset>
-                <legend>Contacto</legend>
-                
-                <p>Como desea ser contactado</p>
-                <div class="formContact">
-                    <label for="telefono">Teléfono</label>
-                    <input type="radio" name="radious" value="telefono" id="telefono">
-                    <label for="email1">Email</label>
-                    <input type="radio" name="radious" value="correo" id="email1">
-                </div>
-                <p>Si elijió teléfono, elija la Fecha y Hora</p>
-                <label for="fecha">Fecha</label>
-                <input type="date" id="fecha">
-                <label for="hora">Hora</label>
-                <input type="time" id="hora">
-
-            </fieldset>
-
-
-            <input type="submit" value="Enviar" class="button buttonGreen">
-        </form>
     </main>
 
     <footer class="section siteFooter">
