@@ -37,3 +37,12 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
 }
+@media (min-width: 480px){
+    .dosColumnas{
+        display: flex;
+        justify-content: space-between;
+    }
+    .entrada-blog{
+        flex-basis: calc(50% - 1rem);
+    }
+}
