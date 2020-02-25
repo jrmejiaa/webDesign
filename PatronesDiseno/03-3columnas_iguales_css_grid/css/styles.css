@@ -37,3 +37,10 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
 }
+@media (min-width: 768px){
+    .tresColumnas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 2rem;
+    }
+}
