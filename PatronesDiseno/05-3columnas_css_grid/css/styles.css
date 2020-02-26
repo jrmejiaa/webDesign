@@ -46,3 +46,10 @@ p {
     font-weight: bold;
     text-transform: uppercase;
 }
+@media (min-width:768px){
+    .contenedor-grid{
+        display: grid;
+        grid-template-columns: 3fr repeat(2,1fr);
+        column-gap: 2rem;
+    }
+}
