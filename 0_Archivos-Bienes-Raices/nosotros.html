@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- The last style sheet should be yours -->
+    <link rel="stylesheet" href="css/style.css">    
+    
+</head>
+<body>
+    <!-- The id is a attribute to make a difference between the similar label and it is used to stablish the style of this section without affecting the other ones with the similar name -->
+    <header class="siteHeader"> 
+        <!-- The HEADER has all the head information of the webpage and there is just one of them per webpage -->
+        <div class="container contentHeader">
+            <div class="bar">
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+                </a>
+                <nav class="navigation">
+                    <!-- NAV is used to create a section which indicates a part of links in the webpage. It can be found in a different parts of the project -->
+                    <a href="nosotros.html">Nosotros</a>  <!-- target="_blank" to open a new tab-->
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="fw-300 centerText">Conoce Sobre Nosotros</h1>
+
+        <div class="nosotrosContent">
+            <div class="img">
+                <img src="img/nosotros.jpg" alt="Nosotros">
+            </div>
+            <div class="textNosotros">
+                <blockquote>25 Años de Experiencia</blockquote>
+
+                <p>Mauris condimentum, purus in sodales aliquet, purus ex congue urna, et sagittis dui dolor eget elit. Ut imperdiet lectus eu massa vestibulum faucibus. Pellentesque facilisis, nulla eget interdum cursus, tortor eros eleifend neque, sed fermentum metus urna sed nulla. Morbi pretium justo sit amet dapibus aliquam. Donec rutrum lacus id eros finibus scelerisque. Integer velit tellus, euismod a orci a, ullamcorper posuere urna. Fusce eu fringilla augue. Sed maximus turpis id condimentum pharetra. Aliquam pharetra nisi sed tempus luctus. Curabitur porttitor odio id lorem faucibus, in aliquet libero rutrum. Cras nec purus in nulla ullamcorper tincidunt. Donec fermentum sit amet enim non imperdiet. Quisque lobortis suscipit risus.</p>
+
+                <p>Sed quis elit ipsum. Ut non turpis turpis. Fusce pharetra lacinia nisl sit amet placerat. Etiam orci enim, auctor non fringilla eu, faucibus ut augue. Nam aliquet nulla convallis, efficitur purus quis, sagittis risus. </p>
+            </div>
+        </div>
+    </main>
+
+    <section class="container">
+        <!-- 
+            There are certain rules to decide which part is a SECTION: 
+                1. The information is about two different things
+                2. There is a secondary header, which separates both sections
+            If both are true, it could be used the SECTION label to make a difference
+        -->
+        <h2 class="fw-300 centerText">Mas sobre nosotros</h2>
+        
+        <div class="iconsNosotros">
+            <div class="icon">
+                <!-- the DIV section is used when it is a division but it is not so important to use a SECTION and it does not satisfy the conditions.-->
+                <img src="img/icono1.svg" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt alias earum porro! Quasi minima officia fuga autem! Dolorem molestiae facere ullam. Magni, voluptatibus incidunt dignissimos qui voluptatum consectetur perferendis esse?</p>
+            </div>
+
+            <div class="icon">
+                <img src="img/icono2.svg" alt="Icono Mejor Precio">
+                <h3>El mejor Precio</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
+            </div>
+
+            <div class="icon">
+                <img src="img/icono3.svg" alt="Icono A Tiempo">
+                <h3>A Tiempo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section siteFooter">
+        <!-- It uses to make the final part of a webpage, although is its main purpose, it can be used alsoto determine a footer inside of a section that we were talking about. For example, the autor of some phrase in the BLOCKQUOTE label or at the end of an article to say who has written the article (inside of the ARTICLE label) -->
+        <div class="container containerFooter">
+            <nav class="navigation">
+                <a href="nosotros.html">Nosotros</a>  <!-- target="_blank" para abrir una nueva pestaña-->
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservados 2019 &copy;</p> 
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bienes Raíces</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <!-- The last style sheet should be yours -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- The id is a attribute to make a difference between the similar label and it is used to stablish the style of this section without affecting the other ones with the similar name -->
+    <header class="siteHeader begin"> 
+        <!-- The HEADER has all the head information of the webpage and there is just one of them per webpage -->
+        <div class="container contentHeader">
+            <div class="bar">
+                <a href="/">
+                    <img src="img/logo.svg" alt="Logotipo de Bienes Raices">
+                </a>
+                <nav class="navigation">
+                    <!-- NAV is used to create a section which indicates a part of links in the webpage. It can be found in a different parts of the project -->
+                    <a href="nosotros.html">Nosotros</a>  <!-- target="_blank" to open a new tab-->
+                    <a href="anuncios.html">Anuncios</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contacto.html">Contacto</a>
+                </nav>
+            </div>
+
+            <h1>Venta de Casas y Departamentos Exclusivos de Lujo</h1>
+        </div>
+    </header>
+
+    <section class="container">
+        <!-- 
+            There are certain rules to decide which part is a SECTION: 
+                1. The information is about two different things
+                2. There is a secondary header, which separates both sections
+            If both are true, it could be used the SECTION label to make a difference
+        -->
+        <h2 class="fw-300 centerText">Mas sobre nosotros</h2>
+        
+        <div class="iconsNosotros">
+            <div class="icon">
+                <!-- the DIV section is used when it is a division but it is not so important to use a SECTION and it does not satisfy the conditions.-->
+                <img src="img/icono1.svg" alt="Icono Seguridad">
+                <h3>Seguridad</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt alias earum porro! Quasi minima officia fuga autem! Dolorem molestiae facere ullam. Magni, voluptatibus incidunt dignissimos qui voluptatum consectetur perferendis esse?</p>
+            </div>
+
+            <div class="icon">
+                <img src="img/icono2.svg" alt="Icono Mejor Precio">
+                <h3>El mejor Precio</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
+            </div>
+
+            <div class="icon">
+                <img src="img/icono3.svg" alt="Icono A Tiempo">
+                <h3>A Tiempo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus suscipit vel provident doloribus asperiores natus accusamus ad animi, nihil pariatur numquam quis temporibus ipsum. Ab ullam rerum dolor qui commodi!</p>
+            </div>
+        </div>
+    </section>
+
+    <main class="section container">
+        <!-- The webpage should have just one MAIN inside of all the page, this indicates the main purpose of the webpage. It follows the SECTION rules to make the difference, besides the condition that it is the most important part of the webpage -->
+        <h2 class="fw-300 centerText">Casas y Depas de Venta</h2>
+        <div class="containerAnuncios">
+            <div class="anuncio">
+                <img src="img/anuncio1.jpg" alt="Anuncio casa en el Lago">
+                <div class="contentAnuncio">
+                    <h3>Casa de Lujo en el Lago</h3>
+                    <p>Casa en el lago con excelente vista, acabados de lujo a un excelente precio</p>
+                    <p class="price">$3,000,000</p>
+
+                    <ul class="iconsChar">
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                    </ul>
+                    <a href="anuncio.html" class="button buttonYellow dblock">Ver Propiedad</a>
+
+                </div>
+            </div>
+
+            <div class="anuncio">
+                <img src="img/anuncio2.jpg" alt="Anuncio casa terminados de Lujo">
+                <div class="contentAnuncio">
+                    <h3>Casa terminados de Lujo</h3>
+                    <p>Casas con diseño moderno, así como tecnología inteligente y amoblado</p>
+                    <p class="price">$2,000,000</p>
+
+                    <ul class="iconsChar">
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                    </ul>
+
+                    <a href="anuncio.html" class="button buttonYellow dblock">Ver Propiedad</a>
+                </div>
+
+            </div>
+
+            <div class="anuncio">
+                <img src="img/anuncio3.jpg" alt="Anuncio casa con alberca">
+                <div class="contentAnuncio">
+                    <h3>Casa con Alberca</h3>
+                    <p>Casa con alberca y acabados de lujo en la ciudad, excelente oportunidad</p>
+                    <p class="price">$3,000,000</p>
+
+                    <ul class="iconsChar">
+                        <li>
+                            <img src="img/icono_wc.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_estacionamiento.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <img src="img/icono_dormitorio.svg" alt="icono_wc">
+                            <p>3</p>
+                        </li>
+                    </ul>
+
+                    <a href="anuncio.html" class="button buttonYellow dblock">Ver Propiedad</a>
+                </div>
+            </div>
+        </div>
+        <div class="verTodas">
+            <a href="anuncios.html" class="button buttonGreen">Ver Todas</a>
+        </div>
+    </main>
+
+    <section class="contactImage">
+        <div class="container contentContact">
+            <h2>Encuentra la casa de tus sueños</h2>
+            <p>Llena el formulario de contacto y un asesor se pondrá en contacto contigo a la brevedad</p>
+            <a href="contacto.html" class="button buttonYellow">Contáctanos</a> 
+        </div>
+    </section>
+
+    <div class="inferiorSection container section">
+        <section class="blog">
+            <h3 class="fw-300 centerText">Nuestro Blog</h3>
+            <article class="entryBlog">
+                <!-- It uses for the entrys in a Blog, Foro, Article or a commentary section -->
+                <div class="entryImg">
+                    <img src="img/blog1.jpg" alt="Entrada Blog 1">
+                </div>
+                <div class="entryText">
+                    <a href="entryblog.html">
+                        <h4>Terraza en el techo de tu casa</h4>
+                    </a>
+                    <p>Escrito el: <span>20/10/2019</span> por: <span>Admin</span> </p>
+                    <p>Consejos para constuir una terraza en el techo de tu casa, con los mejores materiales y ahorrando dinero</p>
+                </div>
+            </article>
+
+            <article class="entryBlog">
+                <div class="entryImg">
+                    <img src="img/blog2.jpg" alt="Entrada Blog 2">
+                </div>
+                <div class="entryText">
+                    <a href="entryblog.html">
+                        <h4>Guía para la decoración de tu hogar</h4>
+                    </a>
+                    <p>Escrito el: <span>20/10/2019</span> por: <span>Admin</span></p>
+                    <p>Maximiza el espacio en tu hogar con esta guia, aprende a combinar muebles y colores para darle vida a tu espacio</p>
+                </div>
+            </article>
+        </section>
+
+        <section class="testimonials">
+            <h3 class="fw-300 centerText">Testimoniales</h3>
+            <div class="testimonial">
+                <blockquote>
+                    <!-- When it wants to give a testimony of any experience, it uses this label to enfatize the idea is from another person -->
+                    El personal se comportó de una excelente forma, muy buena atención y la casa que me ofrecieron cumple con todas mis expectativas. 
+                </blockquote>
+                <p>- Jairo Mejia</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="section siteFooter">
+        <!-- It uses to make the final part of a webpage, although is its main purpose, it can be used alsoto determine a footer inside of a section that we were talking about. For example, the autor of some phrase in the BLOCKQUOTE label or at the end of an article to say who has written the article (inside of the ARTICLE label) -->
+        <div class="container containerFooter">
+            <nav class="navigation">
+                <a href="nosotros.html">Nosotros</a>  <!-- target="_blank" para abrir una nueva pestaña-->
+                <a href="anuncios.html">Anuncios</a>
+                <a href="blog.html">Blog</a>
+                <a href="contacto.html">Contacto</a>
+            </nav>
+            <p class="copyright">Todos los derechos reservados 2019 &copy;</p> 
+        </div>
+    </footer>
+</body>
+</html>
