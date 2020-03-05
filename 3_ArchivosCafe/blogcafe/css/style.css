@@ -1,0 +1,265 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;     /* 1rem = 10px */  
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 2;
+}
+/* Globals */
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+h1, h2, h3, h4{
+    font-family: 'PT Sans', sans-serif;
+}
+h1{
+    font-size: 4.8rem;
+}
+h2{
+    font-size: 4rem;
+    line-height: 1.2;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
+img{
+    max-width: 100%;
+}
+/* Utilities */
+.centerText{
+    text-align: center;
+}
+.no-margin{
+    margin: 0;
+}
+/* Grid */
+@media (min-width: 768px){
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .centerColumns{
+        justify-content: center;
+    }
+    .column-4{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+    .column-6{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .column-8{
+        flex: 0 0 calc(66.6% - 1rem);
+    }
+    .column-10{
+        flex: 0 0 calc(83.3% - 1rem);
+    }
+    .column-12{
+        flex: 0 0 100%;
+    }
+}
+/* Buttons */
+.button{
+    display: block;
+    text-align: center;
+    padding: 1rem 3rem;
+    margin-top: 2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'PT Sans',sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    border: none;
+    flex: 0 0 100%;
+}
+@media (min-width: 768px){
+    .button{
+        display: inline-block;
+        margin: 2rem 0;
+        flex: 0 0 auto;
+    }
+}
+.button-main{
+    background-color: black;
+}
+.button-secondary{
+    background-color: #784d3c;
+}
+.button:hover{
+    cursor: pointer;
+}
+
+/* Header */
+@media (min-width:768px){
+    .bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.site-header{
+    background-image: url(../img/banner.jpg);
+    background-repeat: no-repeat; 
+    background-position: center center;
+    background-size: cover;
+    height: 60rem;
+}
+.site-header a{
+    color: white;
+    text-decoration: none;
+}
+.site-header h1{
+    text-align: center;
+    font-weight: 400;
+}
+.site-header h1 span{
+    font-weight: 700;
+}
+/* Navigation */
+.navigation a{
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+}
+@media (min-width: 768px){
+    .navigation a {
+        display: inline;
+        margin-right: 2rem;
+    }
+    .navigation a:last-of-type{
+        margin-right: 0;
+    }
+}
+/* Header Text */
+.textHeader{
+    color: white;
+    text-align: center;
+    margin-top: 5rem;
+}
+@media (min-width: 768px){
+    .textHeader{
+        margin-top: 15rem;
+    }
+}
+.textHeader p {
+    font-size: 2rem;
+}
+
+/* Main Content */
+.mainContent{
+    display: flex;
+    flex-wrap: wrap;
+}
+.blog,
+.curses{
+    flex: 0 0 100%;
+}
+.curses{
+    order: -1;
+}
+@media (min-width: 768px){
+    .mainContent{
+        justify-content: space-between;
+    }
+    .blog{
+        flex-basis: 66.6%;
+        order: -1;
+    }
+    .curses{
+        flex-basis: calc(33.3% - 4rem);
+        
+    }
+}
+/* Blog part */
+.entryBlog{
+    margin-bottom: 2rem;
+    border-bottom: 0.5rem solid #e1e1e1;
+}
+.entryBlog:last-of-type{
+    border: none;
+}
+/* Sidebar curses */
+.listCurses{
+    padding: 0;
+    list-style: none;
+}
+.curse{
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 0.5rem solid #e1e1e1;
+}
+.curse:last-of-type{
+    border: none;
+}
+.curse p{
+    font-family: 'PT Sans',sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+.curse p span,
+.curse p.description{
+    font-weight: 400;
+}
+/* Footer */
+.footerSite{
+    background-color: black;
+    padding: 3rem;
+    margin-top: 4rem;
+}
+.footerSite p{
+    color: white;
+    font-size: 4rem;
+    font-family: 'PT Sans',sans-serif;
+    font-weight: 400;
+    text-align: center;
+}
+.footerSite p span{
+    font-weight: 700;
+}
+.footerSite a{
+    color: white;
+    text-decoration: none;
+}
+/* Contact Form*/
+.formContact{
+    background-color: white;
+    padding: 5rem;
+}
+@media (min-width: 768px){
+    .formContact{
+        margin-top: -10rem;
+    }
+}
+.formContact .field{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+.formContact .field label{
+    flex: 0 0 8rem;
+} 
+.formContact .field input:not([type="submit"]),
+.formContact textarea{
+    flex: 1;
+    border: 0.1rem solid #e1e1e1;
+    padding: 1rem;
+}
+.formContact textarea{
+    height:  20rem;
+}
+.formContact .sendField{
+    display: flex;
+    justify-content: flex-end;
+}
