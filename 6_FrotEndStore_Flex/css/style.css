@@ -1,0 +1,227 @@
+:root{
+    --oscuro: #212121;
+    --primary: #ffc107;
+    --secundary: #0097A7;
+    --dark_secundary: rgb(1, 107, 119);
+    --gris: #757575;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+    min-height: 100%;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body {
+    min-height: 100%;
+    font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    font-size: 1.6rem;
+}
+h1, h2, h3{
+    margin: 0;
+    text-align: center;
+}
+h3{
+    color: var(--secundary);
+    font-weight: 400;
+    font-size: 3rem;
+}
+p{
+    font-size: 1.8rem;
+    line-height: 2;
+}
+.siteHeader{
+    background-color: white;
+}
+.siteHeader nav{
+    /* Container */
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+    .siteHeader nav{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.siteHeader nav a{
+    color: var(--oscuro);
+    font-size: 2.2rem;
+    text-decoration: none;
+    margin-bottom: 2rem;
+    transition: color .3s ease-in-out;
+}
+.siteHeader nav a:hover{
+    color: var(--dark_secundary);
+}
+.siteHeader nav a:last-of-type{
+    margin-bottom: 0;
+}
+@media (min-width: 768px){
+    .siteHeader nav a{
+        margin-bottom: 0;
+    }
+}
+/* Hero */
+.hero {
+    height: 45rem;
+    background-image: url(../img/hero.jpg);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* pseudo element to make the black style to the photo */
+.hero::after{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0em;
+    left: 0rem;
+    right: 0rem;
+    bottom: 0rem;
+}
+.containerHero{
+    color: white;
+    /* These lines to bring the text to the front */
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+.containerHero i{
+    font-size: 5rem;
+    color: var(--primary);
+}
+.button{
+    background-color: var(--secundary);
+    padding: 1rem 5rem;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 2.2rem;
+    border-radius: 0.5rem;
+    border: none;
+    transition: background-color .3s ease-in-out;
+}
+.button:hover{
+    background-color: var(--dark_secundary);
+    cursor: pointer;
+}
+/* Services */
+.container{
+    max-width: 120rem;
+    width: 95%;
+    margin: 3rem auto; 
+    background-color: white;
+    padding: 3rem;
+    border-radius: 1rem;
+    /* Shadow */
+    -webkit-box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.82);
+    -moz-box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.82);
+    box-shadow: 0px 10px 21px -9px rgba(0,0,0,0.82);
+}
+.containerServices{
+    margin-top: 3rem;
+}
+@media (min-width: 768px){
+    .containerServices{
+        display: flex;
+        justify-content: space-between;
+    }
+    .service{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
+.icons{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem auto;
+}
+.icons i{
+    font-size: 3rem;
+
+}
+/* Form */
+form {
+    background-color: var(--gris);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+form legend {
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin: 3rem 0;    
+}
+@media (min-width: 768px){
+    form{
+        max-width: 80rem;
+        margin: 3rem auto;
+    }
+    .containerField{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .field{
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+.field input{
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+    height: 4rem;
+}
+.field textarea{
+    display: block;
+    width: 100%;
+    height: 6rem;
+
+}
+@media (min-width: 768px){
+    .field{
+        display: flex;
+        margin-bottom: 2rem;
+        color: white;
+    }
+    .field label{
+        flex: 0 0 9rem;
+        margin-top: 1rem;
+    }
+    .field input{
+        flex: 1;
+        height: 4rem;
+    }
+    .field textarea{
+        flex: 1;
+        height: 6rem;
+    }
+    .w-100{
+        flex: 0 0 100%;
+    }    
+}
+.send{
+    display: flex;
+    justify-content: flex-end;
+}
+

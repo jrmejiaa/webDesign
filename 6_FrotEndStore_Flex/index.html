@@ -5,9 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Freelancer</title>
+    <link href="https://fonts.googleapis.com/css?family=Krub:400,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ad929846be.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header class="siteHeader">
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Nosotros</a>
+            <a href="#">Clientes</a>
+            <a href="#">Contactos</a>
+        </nav>
+    </header>
+    <div class="hero">
+        <div class="containerHero">
+            <h1>Diseño y Desarrollo Freelancer</h1>
+            <p><i class="fas fa-map-marker-alt"></i>Duitama, Boyacá</p>
+            <a href="#" class="button">Contactar</a>
+        </div>
+    </div>
+    <div class="container">
+        <main class="services">
+            <h2>Nuestros Servicios</h2>
 
+            <div class="containerServices">
+                <div class="service">
+                    <h3>Diseño Web</h3>
+                    <div class="icons">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id qui error ea, facilis non accusamus voluptate rerum asperiores reprehenderit doloribus repellat quasi quas ullam, eius dignissimos repellendus fugit.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Aplicaciones Móviles</h3>
+                    <div class="icons">
+                        <i class="fab fa-android"></i>
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id qui error ea, facilis non accusamus voluptate rerum asperiores reprehenderit doloribus repellat quasi quas ullam, eius dignissimos repellendus fugit.</p>
+                </div>
+
+                <div class="service">
+                    <h3>Social Media</h3>
+                    <div class="icons">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-twitter-square"></i>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id qui error ea, facilis non accusamus voluptate rerum asperiores reprehenderit doloribus repellat quasi quas ullam, eius dignissimos repellendus fugit.</p>
+                </div>
+            </div>
+        </main>
+
+        <section id="contact" class="contact">
+            <h2>Contacto</h2>
+            <form action="#">
+                <legend>Contáctanos llenando todos los campos</legend>
+                
+                <div class="containerField">
+                    <div class="field">
+                        <label>Nombre:</label>
+                        <input type="text" name="nombre" placeholder="Nombre">
+                    </div>
+
+                    <div class="field">
+                        <label>Teléfono:</label>
+                        <input type="tel" name="telefono" placeholder="Tu Teléfono">
+                    </div>
+
+                    <div class="field w-100">
+                        <label>Correo:</label>
+                        <input type="mail" name="mail" placeholder="Tu Correo">
+                    </div>
+                    <div class="field w-100">
+                        <label>Mensaje:</label>
+                        <textarea></textarea>
+                    </div>
+                    <div class="send">
+                        <input type="submit" class="button" value="Enviar">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </div>
 </body>
+
 </html>
