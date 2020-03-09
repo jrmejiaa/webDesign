@@ -1,0 +1,99 @@
+html {
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+body{
+    /* Change the font */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    /* Create the degrade style using Colorzilla */
+    height: 100%;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#e507e7+0,c85ec7+56,c85ec7+56,a849a3+100 */
+    background: rgb(229,7,231); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(229,7,231,1) 0%, rgba(200,94,199,1) 56%, rgba(200,94,199,1) 56%, rgba(168,73,163,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(229,7,231,1) 0%,rgba(200,94,199,1) 56%,rgba(200,94,199,1) 56%,rgba(168,73,163,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(229,7,231,1) 0%,rgba(200,94,199,1) 56%,rgba(200,94,199,1) 56%,rgba(168,73,163,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e507e7', endColorstr='#a849a3',GradientType=0 ); /* IE6-9 */
+    background-attachment: fixed;
+}
+/* Globals */
+img{
+    max-width: 100%;
+}
+h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+.container{
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+/* Header */
+header{
+    text-align: center;
+    padding: 4rem 0;
+}
+.hero{
+    margin-bottom: 4rem;
+}
+.productList{
+    padding: 0;
+    list-style: none;
+}
+.productList li{
+    float: left;
+    width: 50%;
+    padding: 2rem;
+    text-align: center;
+}
+.productList li:nth-child(2n+1){
+    clear: both;
+}
+@media (min-width: 768px){
+    .productList li{
+        width: 33.3%;
+    }
+    .productList li:nth-child(2n+1){
+        clear: unset;
+    }
+    .productList li:nth-child(3n+1){
+        clear: both;
+    }
+}
+.productList li img{
+    border: 1rem solid rgba(128, 1, 195, .45);
+    transition: border-color .3s ease-in-out;
+}
+.productList li img:hover{
+    border: 1rem solid rgba(128, 1, 195, 1);
+}
+.productList li p{
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+.productList li p span{
+    font-size: 4rem;
+    color: #ffce00;
+}
+.button{
+    background-color: #ffce00;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    text-transform: uppercase;
+    font-family: 'PT Sans',sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: background-color .3s ease-in-out;
+}
+.button:hover{
+    background-color: #EBBC00;
+}
