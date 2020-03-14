@@ -222,6 +222,7 @@ form legend {
 }
 .send{
     display: flex;
+    flex-basis: 100%;
     justify-content: flex-end;
 }
 
