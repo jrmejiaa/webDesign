@@ -10,7 +10,8 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
-
+    <script src="https://kit.fontawesome.com/ad929846be.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Oswald|PT+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -18,8 +19,102 @@
 </head>
 
 <body>
-    <!-- Add your site or application content here -->
-    <p>Hello world! This is HTML5 Boilerplate.</p>
+    <!--[if IE]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+
+    <header class="siteHeader">
+        <div class="hero">
+            <div class="containerHeader">
+                <nav class="socialMedia">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </nav>
+            </div>
+            <div class="eventInformation">
+                <div class="container-icons">
+                    <p class="date"><i class="fas fa-calendar-alt"></i> 10-12 Dic</p>
+                    <p class="city"><i class="fas fa-map-marker-alt"></i> Duitama, Boy.</p>
+                </div>
+
+                <h1 class="nameSite">GdlWebCamp</h1>
+                <p class="slogan">La mejor conferencia de <span>Diseño Web</span></p>    
+            </div> <!-- Event Information -->
+        </div> <!-- Hero Background -->
+    </header>
+
+    <div class="bar">
+        <div class="container flexBar">
+            <div class="logo">
+                <img src="img/logo.svg" alt="Logotipo">
+            </div>
+
+            <div class="movilMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="navMain">
+                <a href="#">Conferencia</a>
+                <a href="#">Calendario</a>
+                <a href="#">Invitados</a>
+                <a href="#">Reservaciones</a>
+            </nav>
+        </div>
+    </div> <!-- Close Bar -->
+
+    <section class="container section">
+        <h2>La Mejor Conferencia de Diseño Web en Español</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus earum laboriosam rem unde, quae culpa. Repudiandae nihil numquam optio recusandae totam quo ea, sed eos exercitationem atque natus consectetur voluptas? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt illo est inventore. </p>
+    </section> <!-- Section basic -->
+
+    <section class="program">
+        <div class="containerVideo">
+            <video autoplay loop muted>
+                <source src="video/video.mp4" type="video/mp4">
+                <source src="video/video.webm" type="video/webm">
+                <source src="video/video.ogv" type="video/ogv">
+            </video>
+        </div> <!-- Video Container -->
+
+        <div class="programContent">
+            <div class="container">
+                <div class="eventProgram">
+                    <h2>Programa del Evento </h2>
+                    <nav class="menuProgram">
+                        <a href="#talleres"><i class="fas fa-code"></i> Talleres</a>
+                        <a href="#conferencias"><i class="fas fa-comment"></i> Conferencias</a>
+                        <a href="#seminarios"><i class="fas fa-university"></i> Seminarios</a>
+                    </nav>
+
+                    <div id="talleres" class="infoCurse ocultar">
+                        <div class="eventDetail">
+                            <h3>HTML5, CSS3 y JavaScript</h3>
+                            <p><i class="far fa-clock"></i> 16:00 hrs</p>
+                            <p><i class="fas fa-calendar"></i> 10 de Diciembre</p>
+                            <p><i class="fas fa-user"></i> Jairo R. Mejia A.</p>
+                        </div>
+
+                        <div class="eventDetail">
+                            <h3>Responsive Web Design</h3>
+                            <p><i class="far fa-clock"></i> 20:00 hrs</p>
+                            <p><i class="fas fa-calendar"></i> 10 de Diciembre</p>
+                            <p><i class="fas fa-user"></i> Jairo R. Mejia A.</p>
+                        </div>
+                        <div class="flex-right">
+                            <a href="#" class="button ">Ver Todos</a>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section> <!-- Program of the Conference -->
+
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
