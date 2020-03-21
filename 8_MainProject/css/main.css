@@ -219,9 +219,13 @@ p{
     color: white;
     font-size: 3rem;
     margin-right: 2rem;
+    transition: all 0.3s ease-in-out;
 }
 .socialMedia a:last-child{
     margin-right: 0;
+}
+.socialMedia a:hover{
+    color: #FE4918;
 }
 .eventInformation{
     margin-top: 2rem;
@@ -548,7 +552,7 @@ p{
 }
 .tablePrice ul li {
     font-family: 'PT Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
     color: #868686;
