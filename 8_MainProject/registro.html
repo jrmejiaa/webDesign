@@ -12,6 +12,7 @@
     <!-- Place favicon.ico in the root directory -->
     <script src="https://kit.fontawesome.com/ad929846be.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Oswald|PT+Sans:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
 
@@ -201,7 +202,7 @@
                   </div><!--.box-->
             </div> <!--#eventos-->
 
-            <div class="summary" id="summary">
+            <div class="summary containerCenter" id="summary">
                 <h3>Pago y Extras</h3>
                 <div class="box summary-flex">
                     <div class="extras">
@@ -225,19 +226,18 @@
                             </select>
                         </div> <!--Order -->
 
-                        <input type="button" id="calcular" class="button centerButton" value="calcular">
+                        <input type="button" id="calcular" class="button" value="calcular">
                     </div> <!-- Extras -->
 
-                    <div class="total">
+                    <div id="completeTotal" class="total">
                         <p>Resumen</p>
                         <div id="productList" class="productList">
 
                         </div>
-                        <p>Total</p>
                         <div id="totalSum" class="totalSum">
 
                         </div>
-                        <input type="submit" id="buttonRegister" class="button centerButton" value="Pagar">
+                        <input type="submit" id="buttonRegister" class="button" value="Pagar">
                     </div>
                 </div>
             </div> <!--Summary-->
@@ -278,6 +278,7 @@
     <script src="js/vendor/modernizr-3.8.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 

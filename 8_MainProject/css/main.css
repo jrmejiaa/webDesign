@@ -205,6 +205,10 @@ p{
     background-color: #FE4918;
     border: 0.2rem solid #FE4918;
 }
+.centerButton{
+    display: block;
+    margin: 1.5rem auto;
+}
 .flex-right{
     display: flex;
     justify-content: flex-end;
@@ -895,16 +899,34 @@ legend{
 }
 @media (min-width: 768px){
     .summary-flex div{
-        flex: 0 0 calc(50% - 2rem);
+        flex: 0 0 calc(50% - 1rem);
     }
 }
 .extras{
-    padding-top: 2rem;
-    padding-left: 2rem;
+    padding: 2rem;
+}
+.extras p {
+    text-align: left;
+    margin-left: 2rem;
 }
 .extras .order{
     text-align: left;
     margin-bottom: 1rem;
+}
+.extras input:not([type="button"]),
+select{
+    margin: 0;
+    padding: 1rem;
+    font-size: 1.5rem;
+    display: block;
+    width: 60%;
+    background-color: #E1E1E1;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 1rem;
+}
+.extras select{
+    margin: 0;
 }
 .summary-flex label{
     font-size: 1.3rem;
@@ -917,18 +939,14 @@ legend{
 .summary .total{
     padding: 2rem;
 }
-.summary p {
-    margin: 1rem 0;
-}
-.centerButton{
-    display: block;
-    margin: 1.5rem auto;
+.total{
+    display: none;
 }
 .productList{
     background-color: #E1E1E1;
     padding: 2rem;
-    display: none;
     font-size: 1.3rem;
+    border-radius: 2rem;
 }
 .productList span{
     color: #FE4918;
@@ -936,11 +954,16 @@ legend{
     font-weight: bold;
 }
 .totalSum{
+    background-color: #E1E1E1;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 1.8rem;
     text-align: center;
+    border-radius: 2rem;
 }
 .totalSum span{
     color: #FE4918;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: bold;
 }
 
