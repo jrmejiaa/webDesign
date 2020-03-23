@@ -894,11 +894,15 @@ legend{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-.summary-flex div{
+.extras,
+.total{
     flex: 0 0 100%;
 }
 @media (min-width: 768px){
-    .summary-flex div{
+    .extras{
+        flex: 0 0 calc(30% - 1rem);
+    }
+    .total{
         flex: 0 0 calc(50% - 1rem);
     }
 }
@@ -919,7 +923,7 @@ select{
     padding: 1rem;
     font-size: 1.5rem;
     display: block;
-    width: 60%;
+    width: 100%;
     background-color: #E1E1E1;
     margin-bottom: 1rem;
     border: none;
