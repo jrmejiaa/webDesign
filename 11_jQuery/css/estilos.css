@@ -14,11 +14,9 @@ body {
 header {
   padding: 20px 0;
 }
-.activo {
-    border: 5px solid yellow;
-}
 div.contenedor {
-  width: 1200px;
+  max-width: 1200px;
+  width: 95%;
   margin: 0 auto;
 }
 /** Navegacion **/
@@ -76,6 +74,40 @@ main {
   width: 70%;
   float: left;
   padding-right: 40px;
+}
+/* Servicios  */
+.servicios{
+  margin-top: 30px!important;
+}
+.servicios nav{
+  background-color: #00b8e4;
+  max-width: 100%;
+}
+.servicios nav a{
+  padding: 10px;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+}
+.servicios nav a:hover{
+  background-color: #db008d;
+
+}
+.nuestros-servicios{
+  position: relative;
+  height: 100px;
+}
+.nuestros-servicios > div{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  background-color: #db008d;
+  color: white;
+  display: none;
+}
+.activo {
+  background-color: #db008d;
 }
 /** Entradas de post**/
 article {

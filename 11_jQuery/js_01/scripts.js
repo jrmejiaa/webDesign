@@ -1,8 +1,5 @@
-$(document).ready(function() {
-    
-});
-
-$(function(){
+$(function(){	 // JQuery simple form to wait until the HTML is finished
     'use strict';
-    console.log("listo!");
+    // It uses to run the JavaScript after all the HTML code has deployed
+        
 });
