@@ -166,3 +166,66 @@ const gift = document.getElementById("gift");
         }
     }); // DOM CONTENT LOADED
 })();
+
+$(function(){	 // JQuery simple form to wait until the HTML is finished
+    'use strict';
+    // It uses to run the JavaScript after all the HTML code has deployed
+
+    // Lettering
+    $('.nameSite').lettering();
+
+    // always Menu 
+    const windowHeight = $(window).height();
+    const barHeight = $('.bar').innerHeight();
+    $(window).scroll(function () { 
+        let scroll = $(window).scrollTop();
+
+        if(scroll > windowHeight){
+            $('.bar').addClass('fixed');
+            $('body').css({'margin-top':barHeight+'px'});
+        }else{
+            $('.bar').removeClass('fixed');
+            $('body').css({'margin-top':'0px'});
+        }
+    });
+
+    // Menu Responsive
+    $('.movilMenu').on('click',function () {
+        $('.navMain').slideToggle();
+    })
+
+    // Conference Program
+    $('.eventProgram .infoCurse:first').show();
+    $('.menuProgram a:first').addClass('active');
+
+    $('.menuProgram a').on('click', function () {
+        // Remove the class active to all the possible divs
+        $('.menuProgram a').removeClass('active');
+        // Add the class to the tab that it is activated
+        $(this).addClass('active');
+    
+        // Hide the tabs that we are not using
+        $('.ocultar').hide();
+        // Save in the variable the tabs that the user want to see
+        const link = $(this).attr('href');
+        // Show the tab using an visual effect
+        $(link).fadeIn(1000);
+
+        // Delete the jump problem in the link 
+        return false;
+    });
+
+    // Animations to the numbers
+    $('.summaryEvent li:nth-child(1) p:first').animateNumber({number: 6},1200);
+    $('.summaryEvent li:nth-child(2) p:first').animateNumber({number: 15},1500);
+    $('.summaryEvent li:nth-child(3) p:first').animateNumber({number: 3},1200);
+    $('.summaryEvent li:nth-child(4) p:first').animateNumber({number: 9},1500);
+
+    // Countdown 
+    $('.countdown').countdown('2020/08/27 09:00:00', function(event) {
+        $('#days').html(event.strftime('%D'));
+        $('#hours').html(event.strftime('%H'));
+        $('#minutes').html(event.strftime('%M'));
+        $('#seconds').html(event.strftime('%S'));
+    });
+});

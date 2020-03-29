@@ -281,6 +281,12 @@ p{
         line-height: 1;
     }
 }
+/* Lettering */
+.nameSite span{
+    position: relative;
+    text-shadow: 0 0 3rem black;
+}
+
 /* Barra */
 .bar{
     background-color: #353535;
@@ -288,9 +294,21 @@ p{
 }
 .flexBar{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+}
+@media (min-width: 768px){
+    .flexBar{
+        justify-content: space-between;
+    }
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 .logo{
     flex: 0 0 calc(80% - 1rem);
@@ -326,7 +344,6 @@ p{
 }
 /* Primary Navigation */
 .navMain{
-    flex: 1;
     /* Display none because we are use JavaScript to make the button */
     display: none;
 }
@@ -403,7 +420,6 @@ p{
 .menuProgram{
     width: 100%;
     border-bottom: 0.1rem solid #FE4918;
-    padding-bottom: 1rem;
 }
 .menuProgram a{
     display: block;
@@ -413,6 +429,8 @@ p{
     font-family: 'Oswald', sans-serif;
     margin-bottom: 1rem;
     font-size: 2rem;
+    position: relative;
+    padding-bottom: 1rem;
 }
 @media (min-width: 768px){
     .menuProgram{
@@ -428,6 +446,23 @@ p{
     font-size: 2.2rem;
     margin-right: 1rem;
 }
+.ocultar{
+    display: none;
+}
+.menuProgram .active::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    bottom: -2rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: 2rem;
+    width: 3rem;
+    background-image: url(../img/talleres-flecha.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
 /* Event Details */
 .eventDetail{
     margin-top: 2rem;
@@ -438,6 +473,7 @@ p{
     border: none;
 }
 .eventDetail p {
+    text-align: left;
     margin-bottom: 2rem;
     font-size: 1.4rem;
 }
@@ -773,6 +809,17 @@ footer.section{
     padding-bottom: 0;
 }
 /* INTERNAS */
+/* Conference Page */
+.conference .active{
+    border-bottom: 0.2rem solid #FE4918;
+}
+.gallery{
+    text-align: center;
+}
+.gallery a{
+    display: inline-block;
+    margin: 1rem;
+}
 
 /* Registro Page */
 .register h3{

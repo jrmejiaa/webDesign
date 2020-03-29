@@ -110,6 +110,44 @@
                             <a href="#" class="button ">Ver Todos</a>
                         </div>  
                     </div> <!-- #workshops -->
+
+                    <div id="conferencias" class="infoCurse ocultar">
+                        <div class="eventDetail">
+                            <h3>Como ser Freelancer</h3>
+                            <p><i class="far fa-clock"></i> 10:00 hrs</p>
+                            <p><i class="fas fa-calendar"></i> 10 de Diciembre</p>
+                            <p><i class="fas fa-user"></i> Gregorio Sanchez</p>
+                        </div>
+
+                        <div class="eventDetail">
+                            <h3>Tecnologías del Futuro</h3>
+                            <p><i class="far fa-clock"></i> 17:00 hrs</p>
+                            <p><i class="fas fa-calendar"></i> 10 de Diciembre</p>
+                            <p><i class="fas fa-user"></i> Susan Sanchez</p>
+                        </div>
+                        <div class="flex-right">
+                            <a href="#" class="button ">Ver Todos</a>
+                        </div>  
+                    </div> <!-- #workshops -->
+
+                    <div id="seminarios" class="infoCurse ocultar">
+                        <div class="eventDetail">
+                            <h3>Diseño IU/UX para móviles</h3>
+                            <p><i class="far fa-clock"></i> 17:00 hrs</p>
+                            <p><i class="fas fa-calendar"></i> 11 de Diciembre</p>
+                            <p><i class="fas fa-user"></i> Harold García</p>
+                        </div>
+
+                        <div class="eventDetail">
+                            <h3>Aprende a programar en una mañana</h3>
+                            <p><i class="far fa-clock"></i> 10:00 hrs</p>
+                            <p><i class="fas fa-calendar"></i> 11 de Diciembre</p>
+                            <p><i class="fas fa-user"></i> Susan Arrivera</p>
+                        </div>
+                        <div class="flex-right">
+                            <a href="#" class="button ">Ver Todos</a>
+                        </div>  
+                    </div> <!-- #workshops -->
                 </div> <!--Event Program -->
             </div> <!-- Container div -->
         </div> <!-- Program Content -->
@@ -166,16 +204,16 @@
         <div class="container">
             <ul class="summaryEvent">
                 <li>
-                    <p class="number">6</p><p>Invitados</p>
+                    <p class="number"></p><p>Invitados</p>
                 </li>
                 <li>
-                    <p class="number">15</p><p>Talleres</p>
+                    <p class="number"></p><p>Talleres</p>
                 </li>
                 <li>
-                    <p class="number">3</p><p>Días</p>
+                    <p class="number"></p><p>Días</p>
                 </li>
                 <li>
-                    <p class="number">9</p><p>Conferencias</p>
+                    <p class="number"></p><p>Conferencias</p>
                 </li>
             </ul>
         </div>
@@ -288,16 +326,16 @@
         <div class="countdown">
             <ul>
                 <li>
-                    <p class="number">80</p>Días
+                    <p id="days" class="number"></p>Días
                 </li>
                 <li>
-                    <p class="number">15</p>Horas
+                    <p id="hours" class="number"></p>Horas
                 </li>
                 <li>
-                    <p class="number">5</p>Minutos
+                    <p id="minutes" class="number"></p>Minutos
                 </li>
                 <li>
-                    <p class="number">30</p>Segundos
+                    <p id="seconds" class="number"></p>Segundos
                 </li>
             </ul>
         </div>
@@ -339,6 +377,9 @@
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="js/plugins.js"></script>
+    <script src="js/jquery.animateNumber.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.lettering.js"></script>
     <script src="js/main.js"></script>
 
     <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
