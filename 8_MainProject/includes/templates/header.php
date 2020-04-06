@@ -3,14 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home</title>
+    <title>GdlWebCamp</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <script src="https://kit.fontawesome.com/ad929846be.js" crossorigin="anonymous"></script>
+    <link href="fontAwesome/css/all.css" rel="stylesheet"> <!--load all styles -->
+    <!-- <script src="https://kit.fontawesome.com/ad929846be.js" crossorigin="anonymous"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Oswald|PT+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/normalize.css">
@@ -63,7 +64,7 @@
 
             <nav class="navMain">
                 <a href="conferencia.html">Conferencia</a>
-                <a href="#">Calendario</a>
+                <a href="calendario.php">Calendario</a>
                 <a href="#">Invitados</a>
                 <a href="registro.php">Reservaciones</a>
             </nav>
