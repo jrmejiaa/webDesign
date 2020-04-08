@@ -10,11 +10,12 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
     <!-- Place favicon.ico in the root directory -->
-    <link href="fontAwesome/css/all.css" rel="stylesheet"> <!--load all styles -->
-    <!-- <script src="https://kit.fontawesome.com/ad929846be.js" crossorigin="anonymous"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Oswald|PT+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/colorbox.css">
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link href="fontAwesome/css/all.css" rel="stylesheet"> <!--load all styles -->
     <link rel="stylesheet" href="css/main.css">
 
     <meta name="theme-color" content="#fafafa">
@@ -63,9 +64,9 @@
             </div>
 
             <nav class="navMain">
-                <a href="conferencia.html">Conferencia</a>
+                <a href="conferencia.php">Conferencia</a>
                 <a href="calendario.php">Calendario</a>
-                <a href="#">Invitados</a>
+                <a href="invitados.php">Invitados</a>
                 <a href="registro.php">Reservaciones</a>
             </nav>
         </div>

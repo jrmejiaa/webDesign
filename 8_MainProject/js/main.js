@@ -228,4 +228,7 @@ $(function(){	 // JQuery simple form to wait until the HTML is finished
         $('#minutes').html(event.strftime('%M'));
         $('#seconds').html(event.strftime('%S'));
     });
+
+    // Invitados Page Colorbox
+    $('.invitedInfo').colorbox({inline:true, width:"50%"});
 });
