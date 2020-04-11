@@ -81,9 +81,9 @@
 
                 <?php
                 // Unix 
-                setlocale(LC_TIME,'es_ES.UTF-8');
+                setlocale(LC_TIME, 'es_ES.UTF-8');
                 // Windows
-                setlocale(LC_TIME,'spanish');
+                setlocale(LC_TIME, 'spanish');
                 do {
                     $result = $conn->store_result(T_EMPTY);
                     $row = $result->fetch_all(MYSQLI_ASSOC);
@@ -92,14 +92,14 @@
                 ?>
                         <?php if ($i == 0) : ?>
                             <div id="<?php echo strtolower($event['cat_evento']); ?>" class="infoCurse ocultar">
-                        <?php endif; ?>
-                                <div class="eventDetail">
-                                    <h3><?php echo $event['nombre_evento']; ?></h3>
-                                    <p><i class="far fa-clock"></i><?php echo $event['hora_evento']; ?></p>
-                                    <p><i class="fas fa-calendar"></i><?php echo strftime('%A, %d de %B del %Y', strtotime($event['fecha_evento'])); ?></p>
-                                    <p><i class="fas fa-user"></i><?php echo $event['nombre_invitado'] . " " . $event['apellido_invitado']; ?></p>
-                                </div>
-                        <?php if ($i == 1) : ?>
+                            <?php endif; ?>
+                            <div class="eventDetail">
+                                <h3><?php echo $event['nombre_evento']; ?></h3>
+                                <p><i class="far fa-clock"></i><?php echo $event['hora_evento']; ?></p>
+                                <p><i class="fas fa-calendar"></i><?php echo strftime('%A, %d de %B del %Y', strtotime($event['fecha_evento'])); ?></p>
+                                <p><i class="fas fa-user"></i><?php echo $event['nombre_invitado'] . " " . $event['apellido_invitado']; ?></p>
+                            </div>
+                            <?php if ($i == 1) : ?>
                                 <div class="flex-right">
                                     <a href="calendario.php" class="button ">Ver Todos</a>
                                 </div>
@@ -240,9 +240,43 @@
     <div class="content container">
         <p>regístrate al newsletter</p>
         <h3>GdlWebCamp</h3>
-        <a href="registro.html" class="button transparent">Registro</a>
+        <a href="#mc_embed_signup" class="button buttonNewsLetter transparent">Registro</a>
     </div>
 </div>
+<div style="display: none">
+    <!-- Begin Mailchimp Signup Form -->
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        #mc_embed_signup {
+            background: #fff;
+            clear: left;
+            font: 14px Helvetica, Arial, sans-serif;
+        }
+
+        /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
+	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+    </style>
+    <div id="mc_embed_signup">
+        <form action="https://gyaseguros.us19.list-manage.com/subscribe/post?u=4786a7d3fbf790ddae22e7fa7&amp;id=de2935cf94" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+                <h2>Suscribete a nuestro Newsletter</h2>
+                <div class="indicates-required"><span class="asterisk">*</span>Campo Requerido</div>
+                <div class="mc-field-group">
+                    <label for="mce-EMAIL">Tu Correo Electrónico<span class="asterisk">*</span>
+                    </label>
+                    <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div> <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_4786a7d3fbf790ddae22e7fa7_de2935cf94" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+    </div>
+</div>
+<!--End mc_embed_signup-->
 
 <section class="section container">
     <h2>Faltan</h2>

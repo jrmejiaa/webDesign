@@ -2,7 +2,7 @@
     
     <section class="container">
         <h2>Registro de Usuarios</h2>
-        <form action="index.html" id="register" class="register" method="POST">
+        <form action="validationRegister.php" id="register" class="register" method="POST">
             <fieldset class="register box containerCenter" id="dataUser">
                 <legend>Información Personal</legend>
                 <!-- Form for Name -->
@@ -38,7 +38,7 @@
                         </ul>
                         <div class="order">
                             <label for="dayPass">Boletos Deseados</label>
-                            <input type="number" min="0" id="dayPass" size="3" placeholder="0"> 
+                            <input type="number" min="0" id="dayPass" size="3" name="tickets[]" placeholder="0"> 
                         </div>
                     </div>
                 </li>
@@ -54,7 +54,7 @@
                         </ul>
                         <div class="order">
                             <label for="allPass">Boletos Deseados</label>
-                            <input type="number" min="0" id="allPass" size="3" placeholder="0"> 
+                            <input type="number" min="0" id="allPass" size="3" name="tickets[]" placeholder="0"> 
                         </div>
                     </div>
                 </li>
@@ -70,7 +70,7 @@
                         </ul>
                         <div class="order">
                             <label for="day2Pass">Boletos Deseados</label>
-                            <input type="number" min="0" id="day2Pass" size="3" placeholder="0"> 
+                            <input type="number" min="0" id="day2Pass" size="3" name="tickets[]" placeholder="0"> 
                         </div>
                     </div>
                 </li>
@@ -162,20 +162,20 @@
                         <p>Extras</p>
                         <div class="order">
                             <label for="shirtEvent">Camisa del Evento $10<br><small>(Promoción 7% dcto.)</small></label>
-                            <input type="number" min="0" id="shirtEvent" size="3" placeholder="0">
+                            <input type="number" min="0" id="shirtEvent" name="shirtOrder" size="3" placeholder="0">
                         </div> <!--Order -->
 
                         <div class="order">
                             <label for="etiquetas">Paquete 10 etiquetas $2 <br><small>(HTML5, CSS3, JavaScript)</small></label>
-                            <input type="number" min="0" id="etiquetas" size="3" placeholder="0">
+                            <input type="number" min="0" id="etiquetas" name="labelOrder" size="3" placeholder="0">
                         </div> <!--Order -->
                         <div class="order">
                             <label for="gift">Seleccione un regalo</label>
                             <select name="gift" id="gift" required>
                                 <option value="" disabled selected>-- Seleccione un regalo --</option>
-                                <option value="eti">Etiquetas</option>
-                                <option value="pul">Pulsera</option>
-                                <option value="plu">Pluma</option>
+                                <option value="2">Etiquetas</option>
+                                <option value="1">Pulsera</option>
+                                <option value="3">Pluma</option>
                             </select>
                         </div> <!--Order -->
 
@@ -190,7 +190,8 @@
                         <div id="totalSum" class="totalSum">
 
                         </div>
-                        <input type="submit" id="buttonRegister" class="button" value="Pagar">
+                        <input type="hidden" name="totalPay" id="totalPay">
+                        <input type="submit" id="buttonRegister" name="submit" class="button" value="Pagar">
                     </div>
                 </div>
             </div> <!--Summary-->

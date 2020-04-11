@@ -1080,6 +1080,10 @@ select{
 .fixPadding{
     padding: 0rem!important;
 }
+/* ColorBox Newsletter Fix */
+.buttonNewsLetter{
+    padding: 1rem 4rem!important;
+}
 
    /* ==========================================================================
    Helper classes

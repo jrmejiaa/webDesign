@@ -106,6 +106,9 @@ const gift = document.getElementById("gift");
                     }
                     totalSum.style.display = "block";
                     totalSum.innerHTML = `TOTAL: <span>$ ${totalPay}</span>`;
+                    // Send information to a input to read with PHP
+                    document.getElementById("totalPay").value = totalPay;
+
                 }
             }
 
@@ -236,9 +239,14 @@ $(function(){	 // JQuery simple form to wait until the HTML is finished
         $('#minutes').html(event.strftime('%M'));
         $('#seconds').html(event.strftime('%S'));
     });
-    console.log(fileName);
+    console.log(window.screen.width);
     if(fileName == "invitados.php" || fileName == "index.php"){
-        // Invitados Page Colorbox
-        $('.invitedInfo').colorbox({inline:true, width:"50%"});
+        if(window.screen.width < 768){
+            $('.invitedInfo').colorbox({inline:true, width:"80%"});
+            $('.buttonNewsLetter').colorbox({inline:true, width:"80%"});
+        }else{
+            $('.invitedInfo').colorbox({inline:true, width:"50%"});
+            $('.buttonNewsLetter').colorbox({inline:true, width:"50%"});
+        }
     }
 });
