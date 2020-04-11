@@ -13,15 +13,23 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800|Oswald|PT+Sans:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/colorbox.css">
-    <link rel="stylesheet" href="css/lightbox.css">
+    <?php 
+        $file = basename($_SERVER['PHP_SELF']);
+        $page = str_replace(".php","",$file);
+
+        if($page == "invitados" || $page == "index"){
+            echo '<link rel="stylesheet" href="css/colorbox.css">';
+        }elseif($page == 'conferencia'){
+            echo '<link rel="stylesheet" href="css/lightbox.css">';
+        }
+    ?>
     <link href="fontAwesome/css/all.css" rel="stylesheet"> <!--load all styles -->
     <link rel="stylesheet" href="css/main.css">
 
     <meta name="theme-color" content="#fafafa">
 </head>
 
-<body>
+<body class="<?php echo $page; ?>">
     <!--[if IE]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->

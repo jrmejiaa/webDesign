@@ -8,9 +8,9 @@ const gift = document.getElementById("gift");
 
         // Get the name of the page
         const fileName = location.pathname.split("/").slice(-1)[0]
-
+        
         // HOME PAGE
-        if(fileName == "index.html"){
+        if(fileName == "index.php"){
             // Map 
             let map = L.map('map').setView([5.826563, -73.033499], 18);
 
@@ -22,7 +22,7 @@ const gift = document.getElementById("gift");
                 .bindPopup('GDLWebcamp 2020 <br> Boletos ya disponibles!')
                 .openPopup();
         
-        }else if(fileName == "registro.html"){
+        }else if(fileName == "registro.php"){
         // REGISTRO PAGE
 
             // Field user data
@@ -171,8 +171,16 @@ $(function(){	 // JQuery simple form to wait until the HTML is finished
     'use strict';
     // It uses to run the JavaScript after all the HTML code has deployed
 
+    // Get the name of the page
+    const fileName = location.pathname.split("/").slice(-1)[0]
+
     // Lettering
     $('.nameSite').lettering();
+
+    // Add class Active Menu
+    $('body.conferencia .navMain a:contains("Conferencia")').addClass('active');
+    $('body.calendario .navMain a:contains("Calendario")').addClass('active');
+    $('body.invitados .navMain a:contains("Invitados")').addClass('active');
 
     // always Menu 
     const windowHeight = $(window).height();
@@ -228,7 +236,9 @@ $(function(){	 // JQuery simple form to wait until the HTML is finished
         $('#minutes').html(event.strftime('%M'));
         $('#seconds').html(event.strftime('%S'));
     });
-
-    // Invitados Page Colorbox
-    $('.invitedInfo').colorbox({inline:true, width:"50%"});
+    console.log(fileName);
+    if(fileName == "invitados.php" || fileName == "index.php"){
+        // Invitados Page Colorbox
+        $('.invitedInfo').colorbox({inline:true, width:"50%"});
+    }
 });
