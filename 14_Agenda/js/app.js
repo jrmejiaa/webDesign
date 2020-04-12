@@ -1,6 +1,7 @@
 // Global Variables
-const formContact = document.querySelector('#contacto');
-listContacts = document.querySelector('#listado-contactos tbody');
+const     formContact = document.querySelector('#contacto'),
+          listContacts = document.querySelector('#listado-contactos tbody'),
+          inputSearcher = document.querySelector('#buscar');
 
 (function () {
      'use strict';
@@ -11,6 +12,15 @@ listContacts = document.querySelector('#listado-contactos tbody');
           function eventListener() {
                // When the form is created or edited
                formContact.addEventListener('submit', leerFormulario);
+               // Listener to delete 
+               if(listContacts){
+                    // Listener to eliminate button
+                    listContacts.addEventListener('click',deleteContact);
+               }
+               // Listener to inputSearcher
+               inputSearcher.addEventListener('input',searchContacts);
+               // Show Contacts Visible
+               numberContacts();
           }
 
           function leerFormulario(e) {
@@ -37,6 +47,9 @@ listContacts = document.querySelector('#listado-contactos tbody');
                          insertDB(infoContact);
                     } else {
                          // Edit a contact
+                         const idRegistered = document.querySelector('#id').value;
+                         infoContact.append('id_contacto',idRegistered);
+                         updateRegister(infoContact);
                     }
                }
           }
@@ -72,7 +85,7 @@ listContacts = document.querySelector('#listado-contactos tbody');
                          // Create the link to Edit
                          const buttonEdit = document.createElement('a');
                          buttonEdit.appendChild(iconEdit);
-                         buttonEdit.href = `editar.php?id=${response.id_inserted}`;
+                         buttonEdit.href = `editar.php?id_contacto=${response.id_inserted}`;
                          buttonEdit.classList.add('btn-editar', 'btn');
                          // Add to the father
                          containerActions.appendChild(buttonEdit);
@@ -101,11 +114,102 @@ listContacts = document.querySelector('#listado-contactos tbody');
                          // Pass the validation create the AJAX
                          showNotification('Contacto Editado correctamente', 'correcto');
 
+                         // Update Number of Contacts
+                         numberContacts();
+
                     }
                }
                // Send the data
                xhr.send(data);
                // Read the errors
+          }
+
+          function updateRegister(data) {
+               // AJAX Call
+               const xhr = new XMLHttpRequest();
+               
+               xhr.open('POST','inc/modelos/modelo-contactos.php',true);
+
+               xhr.onload = function() {
+                    if(this.status === 200){
+                         const response = JSON.parse(xhr.responseText);
+                         console.log(response);
+                         if(response.respuesta === "correcto"){
+                              showNotification('El contacto fue Actualizado','correcto');
+                         }else{
+                              showNotification('Hubo un error...','error');
+                         }
+                    }
+                    // After three seconds go to index again
+                    setTimeout(() => {
+                         window.location.href = "index.php";
+                    }, 4000);
+               }
+
+               xhr.send(data);
+          }
+
+          function deleteContact(e) {
+               const target = e.target.parentElement.classList.contains('btn-borrar');
+               // If the target is the trash
+               if(target){
+                    const id = e.target.parentElement.getAttribute('data-id');
+                    // Ask the user if it is secure of the action
+                    const response = confirm('¿Estas seguro de que quieres borrar?')
+                    if(response){
+                         // Call to AJAX
+                         const xhr = new XMLHttpRequest();
+                         console.log(`inc/modelos/modelo-contactos.php?id_contacto=${id}&accion=borrar`);
+                         xhr.open('GET',`inc/modelos/modelo-contactos.php?id_contacto=${id}&accion=borrar`,true);
+
+                         xhr.onload = function(){
+                              if(this.status === 200){
+                                   const result = JSON.parse(xhr.responseText);
+                                   if(result.respuesta === "correcto"){
+                                        // Delete the register from DOM
+                                        e.target.parentElement.parentElement.parentElement.remove();
+                                        // Show notificacion
+                                        showNotification("Contacto Eliminado",'correcto');
+                                        // Update Number of Contacts
+                                        numberContacts();
+                                   }else{
+                                        // Show the message 
+                                        showNotification("Hubo un error...",'error');
+                                   }
+                              }
+                         }
+                         xhr.send();
+                    }
+               }
+          }
+
+          function searchContacts(e) {
+               const expression = new RegExp(e.target.value, "i"),
+                     registers = document.querySelectorAll('tbody tr');
+               
+               
+               registers.forEach(register => {
+                    register.style.display = "none";
+
+                    if(register.childNodes[1].textContent.replace(/\s/g, " ").search(expression) != -1){
+                         register.style.display = "table-row";
+                    }
+                    numberContacts();
+               });      
+          }
+
+          function numberContacts() {
+               const totalContacts = document.querySelectorAll('tbody tr'),
+                     containerNumber = document.querySelector('.total-contactos span');
+               let total = 0;
+
+               totalContacts.forEach(contact =>{
+                    if(contact.style.display === '' || contact.style.display === "table-row"){
+                         total++;
+                    }
+               })
+
+               containerNumber.textContent = total;
           }
 
           function showNotification(message, classNotification) {
