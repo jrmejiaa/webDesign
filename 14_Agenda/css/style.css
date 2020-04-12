@@ -90,6 +90,7 @@ form {
 form legend {
      font-family: var(--fuenteSecundaria);
      font-size: 2rem;
+     display: block;
      text-align: center;
 }
 legend span {
@@ -208,7 +209,7 @@ legend span {
      right: 1rem;
      padding: 1rem 3rem;
      opacity: 0;
-     transition: opacity .5s ease;
+     transition: opacity .5s ease-in-out;
 }
 .visible {
      opacity: 1;

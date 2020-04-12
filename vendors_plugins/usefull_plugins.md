@@ -14,3 +14,7 @@
 
 <https://lokeshdhakar.com/projects/lightbox2/>
 <http://www.jacklmoore.com/colorbox/>
+
+## Make shadows in the files
+
+<https://www.cssmatic.com/>
