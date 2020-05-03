@@ -11,7 +11,7 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
@@ -618,14 +618,14 @@ p{
     line-height: 2.6rem;
 }
 .tablePrice ul li::before{
-    font-family: 'FontAwesome';
+    font-family: 'Font Awesome 5 Free';
     display: inline-block;
     vertical-align: top;
     padding: 0 0.5rem;
     font-size: 2rem;
     color: green;
     -webkit-font-smoothing: antialiased;
-    content: "\f00c";
+    content: "\f058";
 }
 .tablePrice h3{
     font-family: 'Oswald', sans-serif;

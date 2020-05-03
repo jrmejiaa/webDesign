@@ -8,9 +8,9 @@ const gift = document.getElementById("gift");
 
         // Get the name of the page
         const fileName = location.pathname.split("/").slice(-1)[0]
-        
+
         // HOME PAGE
-        if(fileName == "index.php"){
+        if(fileName === "index.php" || fileName === ""){
             // Map 
             let map = L.map('map').setView([5.826563, -73.033499], 18);
 
@@ -239,7 +239,7 @@ $(function(){	 // JQuery simple form to wait until the HTML is finished
         $('#minutes').html(event.strftime('%M'));
         $('#seconds').html(event.strftime('%S'));
     });
-    console.log(window.screen.width);
+
     if(fileName == "invitados.php" || fileName == "index.php"){
         if(window.screen.width < 768){
             $('.invitedInfo').colorbox({inline:true, width:"80%"});
