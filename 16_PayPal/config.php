@@ -3,10 +3,10 @@ require 'paypal/autoload.php';
 
 $apiContext = new \PayPal\Rest\ApiContext(
     new \PayPal\Auth\OAuthTokenCredential(
-        // Client ID
-        "AczJyoAWUYG03fAo5QuGUq8AQ4i15vfKMHMhAaROnoYT2d8OAS49M7sCmT090iEKyRrn24as0us5pSVp",
-        // Client Secret
-        "EIxtYh-FrMkq1IdfN3nszs5P5PIksvqyDiYzzGVVB_3fBquqzXy6VZqPCvdU42Kisxp6tsV2kUtiORjO"
+        'AWWGEdO3a5RuE9fd-qlyHpG1I1IFdxeWozREcRXxffxfXinKfFUTaTcCtSVT0xvrxlfoNT5GZvIlV6IY', 
+        // ClientID
+        'EOSVwvkJzRn0EtcEbuyiR6d3jr_LGwjXFrUxKLqEygf0qDAUB41ptLPEFSpCipT61AlPiwTKgb7-VoyT' 
+        // ClientSecret
     )
 );
 
