@@ -68,6 +68,6 @@ try {
     exit;
 }
 
-$approval = $payment->getApprovalLink();
+// $approval = $payment->getApprovalLink();
 
-header("Location :{$approval}");
+// header("Location :{$approval}");
