@@ -71,14 +71,12 @@
                     $sql .= " ON eventos.id_inv = invitados.id_invitados ";
                     $sql .= " AND eventos.id_cat_evento = 3";
                     $sql .= " ORDER BY id_evento LIMIT 2; ";
-
                     // Send the SQL Command to MySQL to return the multi_query data
                     $conn->multi_query($sql);
                 } catch (\Throwable $th) {
                     //throw $th;
                 }
                 ?>
-
                 <?php
                 // Unix 
                 setlocale(LC_TIME, 'es_ES.UTF-8');
