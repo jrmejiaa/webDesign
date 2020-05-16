@@ -17,7 +17,7 @@ require 'config.php';
 
 $producto = htmlspecialchars($_POST['producto']);
 $precio = (int) htmlspecialchars($_POST['precio']);
-$envio = 0;
+$envio = 3;
 $taxes = 0;
 
 $total = $precio + $envio + $taxes;
@@ -68,6 +68,6 @@ try {
     exit;
 }
 
-// $approval = $payment->getApprovalLink();
+$approval = $payment->getApprovalLink();
 
-// header("Location :{$approval}");
+header("Location :{$approval}");
