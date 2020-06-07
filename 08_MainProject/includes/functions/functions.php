@@ -7,8 +7,8 @@
         // Convert array to JSON
         $json = array();
         foreach ($totalTickets as $key => $tickets_intern) {
-            if ((int) $tickets_intern > 0) {
-                $json[$key] = (int) $tickets_intern;
+            if ((int) $tickets_intern['amount'] > 0) {
+                $json[$key] = (int) $tickets_intern['amount'];
             }
         }
         // Add the optional orders

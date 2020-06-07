@@ -2,7 +2,7 @@
     
     <section class="container">
         <h2>Registro de Usuarios</h2>
-        <form action="validationRegister.php" id="register" class="register" method="POST">
+        <form action="pagar.php" id="register" class="register" method="POST">
             <fieldset class="register box containerCenter" id="dataUser">
                 <legend>Información Personal</legend>
                 <!-- Form for Name -->
@@ -38,7 +38,8 @@
                         </ul>
                         <div class="order">
                             <label for="dayPass">Boletos Deseados</label>
-                            <input type="number" min="0" id="dayPass" size="3" name="tickets[]" placeholder="0"> 
+                            <input type="number" min="0" id="dayPass" size="3" name="tickets[oneDay][amount]" placeholder="0">
+                            <input type="hidden" value="30" name="tickets[oneDay][price]"> 
                         </div>
                     </div>
                 </li>
@@ -54,7 +55,8 @@
                         </ul>
                         <div class="order">
                             <label for="allPass">Boletos Deseados</label>
-                            <input type="number" min="0" id="allPass" size="3" name="tickets[]" placeholder="0"> 
+                            <input type="number" min="0" id="allPass" size="3" name="tickets[Complete][amount]" placeholder="0">
+                            <input type="hidden" value="50" name="tickets[Complete][price]"> 
                         </div>
                     </div>
                 </li>
@@ -70,7 +72,8 @@
                         </ul>
                         <div class="order">
                             <label for="day2Pass">Boletos Deseados</label>
-                            <input type="number" min="0" id="day2Pass" size="3" name="tickets[]" placeholder="0"> 
+                            <input type="number" min="0" id="day2Pass" size="3" name="tickets[twoDays][amount]" placeholder="0"> 
+                            <input type="hidden" value="45" name="tickets[twoDays][price]"> 
                         </div>
                     </div>
                 </li>
@@ -162,12 +165,14 @@
                         <p>Extras</p>
                         <div class="order">
                             <label for="shirtEvent">Camisa del Evento $10<br><small>(Promoción 7% dcto.)</small></label>
-                            <input type="number" min="0" id="shirtEvent" name="shirtOrder" size="3" placeholder="0">
+                            <input type="number" min="0" id="shirtEvent" name="extra[shirtOrder][amount]" size="3" placeholder="0">
+                            <input type="hidden" value="10" name="extra[shirtOrder][price]"> 
                         </div> <!--Order -->
 
                         <div class="order">
                             <label for="etiquetas">Paquete 10 etiquetas $2 <br><small>(HTML5, CSS3, JavaScript)</small></label>
-                            <input type="number" min="0" id="etiquetas" name="labelOrder" size="3" placeholder="0">
+                            <input type="number" min="0" id="etiquetas" name="extra[labelOrder][amount]" size="3" placeholder="0">
+                            <input type="hidden" value="2" name="extra[labelOrder][price]"> 
                         </div> <!--Order -->
                         <div class="order">
                             <label for="gift">Seleccione un regalo</label>
