@@ -1,4 +1,5 @@
 <?php
+include_once "functions/functions.php";
 include_once "templates/header.php";
 include_once "templates/navbar.php";
 include_once "templates/aside.php";
@@ -41,24 +42,25 @@ include_once "templates/aside.php";
                                 <div class="form-group row">
                                     <label for="nameUser" class="col-sm-2 col-form-label">Nombre:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="nameUser" name="nameUser" placeholder="Nombre:">
+                                        <input type="text" class="form-control" id="nameUser" name="nameUser" placeholder="Tu Nombre">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="user" class="col-sm-2 col-form-label">Usuario:</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="user" autocomplete="username " name="user" placeholder="Usuario:">
+                                        <input type="text" class="form-control" id="user" autocomplete="username " name="user" placeholder="Tu Usuario">
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                                    <label for="password" class="col-sm-2 col-form-label">Password</label>
                                     <div class="col-sm-10">
-                                        <input type="password" class="form-control" id="inputPassword3" name="password" placeholder="Password">
+                                        <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                                     </div>
                                 </div>
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
+                                <input type="hidden" name="add-admin" id="add-admin" value="1">
                                 <button type="submit" class="btn btn-info">Añadir</button>
                             </div>
                             <!-- /.card-footer -->

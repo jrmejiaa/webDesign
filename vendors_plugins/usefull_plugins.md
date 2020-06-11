@@ -18,3 +18,7 @@
 ## Make shadows in the files
 
 <https://www.cssmatic.com/>
+
+## Sweet Alert 2
+
+<https://github.com/sweetalert2/sweetalert2>

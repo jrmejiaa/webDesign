@@ -1,34 +1,40 @@
 <?php
-include_once "templates/header.php";
-include_once "templates/navbar.php";
-include_once "templates/aside.php";
 
-echo "<pre>";
-echo var_dump($_POST);
-echo "</pre>";
+if (isset($_POST["add-admin"])) {
+    $user = $_POST['user'];
+    $nameUser = $_POST['nameUser'];
+    $options = array(
+        'cost' => 12
+    );
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT, $options);
 
-?>
+    // Start connection with the database 
+    try {
+        include_once "functions/functions.php";
+        $stmt = $conn->prepare("INSERT INTO admins (user, nameUser, password) VALUES (?,?,?)");
+        $stmt->bind_param("sss", $user, $nameUser, $password);
+        $stmt->execute();
+        if ($stmt->affected_rows == 1) {
+            $response = array(
+                'response' => 'correct',
+                'id_inserted' => $stmt->insert_id
+            );
+        } else {
+            $response = array(
+                'response' => 'error',
+            );
+        }
+        $stmt->close();
+        $conn->close();
+    } catch (\Throwable $th) {
+        echo "Error: " . $th->getMessage();
+    }
 
-<!-- Content Wrapper. Contains page content -->
-<div class="content-wrapper">
-    <!-- Content Header (Page header) -->
-    <div class="content-header">
-        <div class="container-fluid">
-            <div class="row mb-2">
-                <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Resultado Administrador</h1>
-                </div><!-- /.col -->
-                <div class="col-sm-6">
-                    <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Resultado Administrador</li>
-                    </ol>
-                </div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container-fluid -->
-    </div>
-    
-</div>
-<!-- /.content-wrapper -->
-
-<?php include_once "templates/footer.php" ?>
+    // Send a response of a successful operation
+    echo json_encode($response);
+} elseif (isset($_POST["login-admin"])) {
+    echo json_encode($_POST);
+} else {
+    header("Location: crear-admin.php");
+    exit();
+}
