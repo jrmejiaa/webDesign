@@ -9,12 +9,20 @@
     <!-- Sidebar -->
     <div class="sidebar">
         <!-- Sidebar user panel (optional) -->
-        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-            <div class="image">
-                <img src="img/HarryPotterIcon.jpeg" class="img-circle elevation-2" alt="User Image">
+        <div class="user-panel mt-3 pb-3 mb-3">
+            <div class="d-flex">
+                <div class="image">
+                    <img src="img/HarryPotterIcon.jpeg" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block">Jairo R. Mejía Aponte</a>
+                </div>
             </div>
-            <div class="info">
-                <a href="#" class="d-block">Jairo R. Mejía Aponte</a>
+            <div class="hidden">
+                <div class="user-button mt-3">
+                    <a class="btn btn-secondary">Ajustes</a>
+                    <a href="login.php?closeSession=true" class="btn btn-secondary">Cerrar Sesión</a>
+                </div>
             </div>
         </div>
 
@@ -142,7 +150,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
+                            <a href="list-admins.php" class="nav-link">
                                 <i class="fas fa-list-ul nav-icon"></i>
                                 <p>Ver Todos</p>
                             </a>

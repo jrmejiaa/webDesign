@@ -15,7 +15,7 @@ const     formContact = document.querySelector('#contacto'),
                // Listener to delete 
                if(listContacts){
                     // Listener to eliminate button
-                    listContacts.addEventListener('click',deleteContact);
+                    listContacts.addEventListener('click', deleteContact);
                }
                // Listener to inputSearcher
                inputSearcher.addEventListener('input',searchContacts);

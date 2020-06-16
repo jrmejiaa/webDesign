@@ -1,6 +1,11 @@
 <?php
 include_once "functions/sessions.php";
 include_once "functions/functions.php";
+// Save the id to get out the data from the database
+$id = $_GET['id'];
+if(!filter_var($id, FILTER_VALIDATE_INT)){
+    die("Error");
+}
 include_once "templates/header.php";
 include_once "templates/navbar.php";
 include_once "templates/aside.php";
@@ -13,12 +18,12 @@ include_once "templates/aside.php";
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0 text-dark">Crear Administrador</h1>
+                    <h1 class="m-0 text-dark">Editar Administrador</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Crear Administrador</li>
+                        <li class="breadcrumb-item"><a href="adminArea.php">Home</a></li>
+                        <li class="breadcrumb-item active">Editar Administrador</li>
                     </ol>
                 </div><!-- /.col -->
             </div><!-- /.row -->
@@ -34,8 +39,13 @@ include_once "templates/aside.php";
                     <!-- Horizontal Form -->
                     <div class="card card-info">
                         <div class="card-header">
-                            <h3 class="card-title">Nuevo Administrador</h3>
+                            <h3 class="card-title">Editar Administrador</h3>
                         </div>
+                        <?php 
+                            $sql = "SELECT * FROM admins WHERE id_admin = $id";
+                            $result = $conn->query($sql);
+                            $admin = $result->fetch_assoc();
+                        ?>
                         <!-- /.card-header -->
                         <!-- form start -->
                         <form class="form-horizontal" name="save-register" id="save-register" method="POST" action="model-admin.php">
@@ -43,17 +53,17 @@ include_once "templates/aside.php";
                                 <div class="form-group row">
                                     <label for="nameUser" class="col-sm-3 col-form-label">Nombre:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="nameUser" name="nameUser" placeholder="Tu Nombre">
+                                        <input type="text" class="form-control" id="nameUser" name="nameUser" placeholder="Tu Nombre" value="<?php echo $admin['nameUser']; ?>">
                                     </div>
                                 </div>
                                 <div class="form-group row">
                                     <label for="user" class="col-sm-3 col-form-label">Usuario:</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control" id="user" autocomplete="username " name="user" placeholder="Tu Usuario">
+                                        <input type="text" class="form-control" id="user" autocomplete="username " name="user" placeholder="Tu Usuario" value="<?php echo $admin['user']; ?>">
                                     </div>
                                 </div>
-                                <div class="form-group row" id="form-password">
-                                    <label for="password" class="col-sm-3 col-form-label">Password:</label>
+                                <div class="form-group row">
+                                    <label for="password" class="col-sm-3 col-form-label">Password</label>
                                     <div class="col-sm-9">
                                         <input type="password" class="form-control" id="password" name="password" placeholder="Password">
                                     </div>
@@ -68,7 +78,8 @@ include_once "templates/aside.php";
                             </div>
                             <!-- /.card-body -->
                             <div class="card-footer">
-                                <input type="hidden" name="state-admin" id="state-admin" value="create">
+                                <input type="hidden" name="state-admin" id="state-admin" value="update">
+                                <input type="hidden" name="id_register" id="id_register" value="<?php echo $admin['id_admin']; ?>">
                                 <button type="submit" class="btn btn-info" id="create-admin">Añadir</button>
                             </div>
                             <!-- /.card-footer -->
