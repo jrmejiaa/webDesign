@@ -1,5 +1,9 @@
 # Useful Plugins to develop Webpages
 
+## Sleketon of HTML5 Boilerplate
+
+<https://html5boilerplate.com/>
+
 ## Plugins to maps
 
 <https://leafletjs.com/>
